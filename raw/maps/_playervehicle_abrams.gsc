@@ -52,6 +52,9 @@ main()
 	precacheShader( "gfx/reticle/mg42_cross.tga" );
 	precacheShader( "reticle_center_cross" );
 	precacheShader( "tank_shell" );
+	// reload fill frames: tank_shell with only the bottom k/16 visible ( main\images\tankfillNN.iwi )
+	for ( i = 1; i < 16; i++ )
+		precacheShader( abrams_fill_shader( i ) );
 	precacheShader( "overlay_low_health" );
 
 	precacheString( &"PLAYERVEHICLE_HINT_BOARD_ABRAMS" );
@@ -553,7 +556,7 @@ abrams_reload()
 
 	self.pv.reloading = true;
 	self.pv.reload_start = gettime();
-	self abrams_hud_reload_start();
+	self thread abrams_hud_reload_fill();
 
 	wait level.pv_abrams_reload_time * 0.4;
 	if ( self.pv.piloted )
@@ -792,7 +795,7 @@ abrams_hud_create()
 
 	// main gun ( bottom right, where the weapon info normally is )
 	hud.shell_back = pv_hud_icon( "tank_shell", 44, 44, -14, -14, "right", "bottom", "right", "bottom" );
-	hud.shell_back.alpha = 0.22;
+	hud.shell_back.alpha = 0.35;
 	hud.shell = pv_hud_icon( "tank_shell", 44, 44, -14, -14, "right", "bottom", "right", "bottom" );
 
 	hud.gun_name = pv_hud_text( "objective", 1.25, -60, -48, "right", "middle", "right", "bottom" );
@@ -842,25 +845,46 @@ abrams_hud_create()
 
 	// back in during a reload: continue the fill where it is
 	if ( self.pv.reloading )
-		self abrams_hud_reload_start();
+		self abrams_hud_reload_frame();
 	else if ( !self.pv.loaded )
 		hud.shell.alpha = 0;
 }
 
-abrams_hud_reload_start()
+// the dim shell icon fills up from the bottom over the reload
+abrams_hud_reload_fill()
+{
+	self endon( "death" );
+
+	while ( self.pv.reloading )
+	{
+		self abrams_hud_reload_frame();
+		wait 0.05;
+	}
+}
+
+abrams_hud_reload_frame()
 {
 	hud = self.pv.hud;
 	if ( !isdefined( hud ) )
 		return;
 
-	total = level.pv_abrams_reload_time;
 	elapsed = ( gettime() - self.pv.reload_start ) / 1000;
-	remaining = pv_max( 0.05, total - elapsed );
-	height = int( pv_clamp( 44 * ( elapsed / total ), 1, 44 ) );
+	step = int( pv_clamp( 16 * elapsed / level.pv_abrams_reload_time, 0, 15 ) );
+	if ( step < 1 )
+	{
+		hud.shell.alpha = 0;
+		return;
+	}
 
-	hud.shell.alpha = 0.85;
-	hud.shell setshader( "tank_shell", 44, height );
-	hud.shell scaleOverTime( remaining, 44, 44 );
+	hud.shell setshader( abrams_fill_shader( step ), 44, 44 );
+	hud.shell.alpha = 1;
+}
+
+abrams_fill_shader( step )
+{
+	if ( step < 10 )
+		return "tankfill0" + step;
+	return "tankfill" + step;
 }
 
 abrams_hud_reload_done()

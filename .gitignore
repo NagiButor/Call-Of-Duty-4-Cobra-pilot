@@ -36,6 +36,22 @@
 !/raw/weapons/sp/cobra_sidewinder_pv
 !/raw/weapons/sp/m1a1_turret_pv
 
+# reload fill HUD frames: materials for the zone, images loaded at runtime from main\images
+!/raw/materials/
+/raw/materials/*
+!/raw/materials/tankfill*
+!/raw/material_properties/
+/raw/material_properties/*
+!/raw/material_properties/tankfill*
+!/raw/images/
+/raw/images/*
+!/raw/images/tankfill*.iwi
+!/main/
+/main/*
+!/main/images/
+/main/images/*
+!/main/images/tankfill*.iwi
+
 # sounds and strings
 !/raw/sound/
 /raw/sound/*

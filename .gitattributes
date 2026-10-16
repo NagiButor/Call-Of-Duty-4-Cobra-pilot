@@ -3,4 +3,3 @@
 *.ff binary
 *.d3dbsp binary
 *.wav binary
-zone/english/*.ff filter=lfs diff=lfs merge=lfs -text
