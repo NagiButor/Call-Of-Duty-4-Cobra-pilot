@@ -52,7 +52,6 @@ main()
 	precacheShader( "gfx/reticle/mg42_cross.tga" );
 	precacheShader( "reticle_center_cross" );
 	precacheShader( "tank_shell" );
-	precacheShader( "pv_reload" );
 	precacheShader( "overlay_low_health" );
 
 	precacheString( &"PLAYERVEHICLE_HINT_BOARD_ABRAMS" );
@@ -854,18 +853,14 @@ abrams_hud_reload_start()
 	if ( !isdefined( hud ) )
 		return;
 
-	total = pv_max( 0.05, level.pv_abrams_reload_time );
-	elapsed = pv_clamp( ( gettime() - self.pv.reload_start ) / 1000, 0, total );
+	total = level.pv_abrams_reload_time;
+	elapsed = ( gettime() - self.pv.reload_start ) / 1000;
 	remaining = pv_max( 0.05, total - elapsed );
+	height = int( pv_clamp( 44 * ( elapsed / total ), 1, 44 ) );
 
-	// pv_reload uses vertex alpha as a bottom-to-top UV mask, NOT opacity.
-	// Keep the original 44x44 quad and texture coordinates throughout the reload.
-	// Client-side alpha interpolation moves only the fill boundary, not the icon.
-	hud.shell setshader( "pv_reload", 44, 44 );
-	hud.shell.color = ( 1, 1, 1 );
-	hud.shell.alpha = elapsed / total;
-	hud.shell fadeOverTime( remaining );
-	hud.shell.alpha = 1;
+	hud.shell.alpha = 0.85;
+	hud.shell setshader( "tank_shell", 44, height );
+	hud.shell scaleOverTime( remaining, 44, 44 );
 }
 
 abrams_hud_reload_done()

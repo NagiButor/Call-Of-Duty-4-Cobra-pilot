@@ -30,7 +30,6 @@ fx,misc/aircraft_light_wingtip_green
 fx,misc/aircraft_light_wingtip_red
 fx,misc/aircraft_light_white_blink
 material,tank_shell
-material,pv_reload
 xmodel,vehicle_cobra_helicopter
 material,ac130_overlay_40mm
 xmodel,vehicle_blackhawk_hero
