@@ -45,9 +45,40 @@ try {
         ($output -join "`n") -match '(?im)\berror\b|\bfailed\b|not recognized|cannot find') {
         throw "HUD shader compilation failed; do not run linker."
     }
+    # Shader Tool v0.1 only builds SM3. The sm2 techset also needs genuine
+    # vs_2_0 / ps_2_0 bytecode; renaming SM3 files is NOT a valid substitute.
+    foreach ($stage in @("vs", "ps")) {
+        $inputFile = Join-Path $PWD "shader_src\${stage}_2_0_pv_shell_fill.hlsl"
+        if (!(Test-Path $inputFile -PathType Leaf)) {
+            throw "Missing SM2 source: $inputFile"
+        }
+        $tempFile = [IO.Path]::GetTempFileName()
+        try {
+            & $fxc /nologo /T "${stage}_2_0" /E "${stage}_main" /Fo $tempFile $inputFile
+            if ($LASTEXITCODE -ne 0) { throw "SM2 $stage compilation failed; do not run linker." }
+            [byte[]]$bytecode = [IO.File]::ReadAllBytes($tempFile)
+            if ($bytecode.Length -lt 8 -or ($bytecode.Length % 4) -ne 0) {
+                throw "Invalid SM2 $stage compiler output"
+            }
+            $versionHex = if ($stage -eq "vs") { "FFFE0200" } else { "FFFF0200" }
+            if ([BitConverter]::ToUInt32($bytecode, 0) -ne [Convert]::ToUInt32($versionHex, 16)) {
+                throw "Wrong shader profile for SM2 $stage"
+            }
+            # CoD4 shader_bin format: uint32 little-endian bytecode length,
+            # followed by the unmodified D3D9 bytecode (including CTAB).
+            [byte[]]$wrapped = New-Object byte[] ($bytecode.Length + 4)
+            [BitConverter]::GetBytes([uint32]$bytecode.Length).CopyTo($wrapped, 0)
+            $bytecode.CopyTo($wrapped, 4)
+            $destination = Join-Path $PWD "${stage}_2_0_c853756d"
+            [IO.File]::WriteAllBytes($destination, $wrapped)
+            Write-Host ("{0}, {1} bytes" -f (Split-Path $destination -Leaf), $wrapped.Length)
+        } finally {
+            Remove-Item $tempFile -ErrorAction SilentlyContinue
+        }
+    }
     # These names are reported by Shader Tool for pv_shell_fill (hash 37AC8A92).
     # Never accept missing, empty, or stale bytecode as a successful compilation.
-    foreach ($name in @("vs_3_0_c853756d", "ps_3_0_c853756d")) {
+    foreach ($name in @("vs_3_0_c853756d", "ps_3_0_c853756d", "vs_2_0_c853756d", "ps_2_0_c853756d")) {
         if (!(Test-Path $name -PathType Leaf)) {
             throw "Compiler produced no $name; do not run linker."
         }
