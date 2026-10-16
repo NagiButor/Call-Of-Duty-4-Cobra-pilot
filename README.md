@@ -53,6 +53,14 @@
 
 Нужны CoD4 Mod Tools.
 
+- Перед первой сборкой HUD перезарядки выполните из папки игры:
+  `powershell -ExecutionPolicy Bypass -File tools\build_reload_hud.ps1`.
+  Нужен CoD4-совместимый HLSL `shader_tool.exe` в `raw/shader_bin` (обычный linker
+  сам HLSL не компилирует). Подготовка Shader Tool:
+  [инструкция](https://github.com/Zoro-6191/cod4-2d-shaders/wiki/How-to-Install-1-shader).
+  Скрипт собирает шейдер и создаёт `pv_reload` из штатного `raw/materials/tank_shell`:
+  используется исходная текстура без новых картинок. Техсет `pf` имеет короткое имя,
+  чтобы безопасно сохранить смещения строк в бинарном материале.
 - Fast file: из папки `bin` выполнить `linker_pc.exe -language english cobra_pilot`.
 - Карта: BSP + Light (IW3xRadiant или CoD4 Compile Tools) → Paths → Reflections → Build Fastfile.
   - Объём браша `lightgrid_volume` должен давать не больше 1 048 576 точек сетки (шаг 32 × 32 × 64),
