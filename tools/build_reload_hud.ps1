@@ -29,11 +29,33 @@ if ((Read-CString $material $nameOffset) -ne "tank_shell" -or
 [Text.Encoding]::ASCII.GetBytes("pf").CopyTo($material, $techOffset)
 $compiler = Join-Path $raw "shader_bin\shader_tool.exe"
 if (!(Test-Path $compiler)) { throw "Install CoD4 HLSL shader_tool.exe in raw\shader_bin first" }
+$fxc = Join-Path $raw "shader_bin\shader_src\fxc.exe"
+if (!(Test-Path $fxc -PathType Leaf)) {
+    throw "Missing HLSL compiler: $fxc. Install fxc.exe before building the HUD."
+}
 Push-Location (Join-Path $raw "shader_bin")
 try {
     New-Item -ItemType Directory -Force "backups" | Out-Null
-    & $compiler pv_shell_fill
-    if ($LASTEXITCODE -ne 0) { throw "HUD shader compilation failed" }
+    $started = [DateTime]::UtcNow
+    # Shader Tool v0.1 may return 0 even when its child fxc.exe fails.
+    $output = & $compiler pv_shell_fill 2>&1
+    $compileExit = $LASTEXITCODE
+    $output | ForEach-Object { Write-Host $_ }
+    if ($compileExit -ne 0 -or
+        ($output -join "`n") -match '(?im)\berror\b|\bfailed\b|not recognized|cannot find') {
+        throw "HUD shader compilation failed; do not run linker."
+    }
+    # These names are reported by Shader Tool for pv_shell_fill (hash 37AC8A92).
+    # Never accept missing, empty, or stale bytecode as a successful compilation.
+    foreach ($name in @("vs_3_0_c853756d", "ps_3_0_c853756d")) {
+        if (!(Test-Path $name -PathType Leaf)) {
+            throw "Compiler produced no $name; do not run linker."
+        }
+        $built = Get-Item $name
+        if ($built.Length -eq 0 -or $built.LastWriteTimeUtc -lt $started.AddSeconds(-2)) {
+            throw "Compiler produced empty or stale $name; do not run linker."
+        }
+    }
 } finally { Pop-Location }
 [IO.File]::WriteAllBytes((Join-Path $raw "materials\pv_reload"), $material)
 $properties = Join-Path $raw "material_properties\tank_shell"
