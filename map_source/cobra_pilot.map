@@ -1,0 +1,536 @@
+iwmap 4
+"000_Global" flags  active
+"The Map" flags 
+// entity 0
+{
+"sundiffusecolor" "0.95 0.8 0.85"
+"sunradiosity" "1.5"
+"sundirection" "-60.0 275.0 0.0"
+"suncolor" "1.0 0.9 0.8"
+"sunlight" "2.4"
+"classname" "worldspawn"
+// brush 0
+{
+ ( -1136 1472 -16 ) ( -1776 1472 -16 ) ( -1776 832 -16 ) ch_tile_floor03 64 64 -1424 -1152 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -1776 832 0 ) ( -1776 1472 0 ) ( -1136 1472 0 ) me_ground_sand1 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 1536 -4992 112 ) ( 2176 -4992 112 ) ( 2176 -4992 -16 ) ch_tile_floor03 64 64 -1424 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 12256 -3408 112 ) ( 12256 -2768 112 ) ( 12256 -2768 -16 ) ch_tile_floor03 64 64 1184 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -1136 1472 112 ) ( -1776 1472 112 ) ( -1776 1472 -16 ) ch_tile_floor03 64 64 -1424 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -1776 1472 112 ) ( -1776 832 112 ) ( -1776 832 -16 ) ch_tile_floor03 64 64 1184 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 1
+{
+ ( -1344 7936 0 ) ( -1600 7936 0 ) ( -1600 7680 0 ) lightgrid_volume 64 64 -1456 -7808 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 4800 8192 576 ) ( 4800 8448 576 ) ( 5056 8448 576 ) lightgrid_volume 64 64 -1456 -7808 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 832 -5072 16 ) ( 1088 -5072 16 ) ( 1088 -5072 0 ) lightgrid_volume 64 64 -1456 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 12592 4208 16 ) ( 12592 4464 16 ) ( 12592 4464 0 ) lightgrid_volume 64 64 7808 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -1504 1456 16 ) ( -1760 1456 16 ) ( -1760 1456 0 ) lightgrid_volume 64 64 -1456 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -1760 8112 16 ) ( -1760 7856 16 ) ( -1760 7856 0 ) lightgrid_volume 64 64 7808 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 2
+{
+ ( 7984 -1408 0 ) ( 7840 -1408 0 ) ( 7840 -1552 0 ) ch_brick_wall_08 128 128 -6160 -10752 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9088 -1552 320 ) ( 9088 -1408 320 ) ( 9232 -1408 320 ) ch_brick_wall_08 128 128 -6160 -10752 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 7840 -1552 44304 ) ( 7984 -1552 44304 ) ( 7984 -1552 -16 ) ch_brick_wall_08 128 128 -6160 16 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8192 -1552 8608 ) ( 8192 -1408 8608 ) ( 8192 -1408 -35712 ) ch_brick_wall_08 128 128 10752 16 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 7968 -1264 44304 ) ( 7824 -1264 44304 ) ( 7824 -1264 -16 ) ch_brick_wall_08 128 128 -6160 16 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 7840 -1408 44304 ) ( 7840 -1552 44304 ) ( 7840 -1552 -16 ) ch_brick_wall_08 128 128 10752 16 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 3
+{
+ ( 8752 -1072 -16 ) ( 8608 -1072 -16 ) ( 8608 -1216 -16 ) ch_brick_wall_08 128 128 -5392 -11088 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9856 -1216 304 ) ( 9856 -1072 304 ) ( 10000 -1072 304 ) ch_brick_wall_08 128 128 -5392 -11088 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8592 -1552 44288 ) ( 8736 -1552 44288 ) ( 8736 -1552 -32 ) ch_brick_wall_08 128 128 -5392 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9088 -1280 8592 ) ( 9088 -1136 8592 ) ( 9088 -1136 -35728 ) ch_brick_wall_08 128 128 11088 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8752 -512 44288 ) ( 8608 -512 44288 ) ( 8608 -512 -32 ) ch_brick_wall_08 128 128 -5392 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8608 -1072 44288 ) ( 8608 -1216 44288 ) ( 8608 -1216 -32 ) ch_brick_wall_08 128 128 11088 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 4
+{
+ ( 9648 -1744 -16 ) ( 9504 -1744 -16 ) ( 9504 -1888 -16 ) ch_brick_wall_08 128 128 -4496 -10416 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 10752 -1888 304 ) ( 10752 -1744 304 ) ( 10896 -1744 304 ) ch_brick_wall_08 128 128 -4496 -10416 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9552 -1552 44288 ) ( 9696 -1552 44288 ) ( 9696 -1552 -32 ) ch_brick_wall_08 128 128 -4496 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 10752 -2032 8592 ) ( 10752 -1888 8592 ) ( 10752 -1888 -35728 ) ch_brick_wall_08 128 128 10416 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9792 -448 44288 ) ( 9648 -448 44288 ) ( 9648 -448 -32 ) ch_brick_wall_08 128 128 -4496 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9504 -1744 44288 ) ( 9504 -1888 44288 ) ( 9504 -1888 -32 ) ch_brick_wall_08 128 128 10416 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 5
+{
+ ( 9264 -2704 -16 ) ( 9120 -2704 -16 ) ( 9120 -2848 -16 ) ch_brick_wall_08 128 128 -4880 -9456 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 10368 -2848 304 ) ( 10368 -2704 304 ) ( 10512 -2704 304 ) ch_brick_wall_08 128 128 -4880 -9456 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9168 -2512 44288 ) ( 9312 -2512 44288 ) ( 9312 -2512 -32 ) ch_brick_wall_08 128 128 -4880 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9600 -2912 8592 ) ( 9600 -2768 8592 ) ( 9600 -2768 -35728 ) ch_brick_wall_08 128 128 9456 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9264 -2144 44288 ) ( 9120 -2144 44288 ) ( 9120 -2144 -32 ) ch_brick_wall_08 128 128 -4880 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9120 -2704 44288 ) ( 9120 -2848 44288 ) ( 9120 -2848 -32 ) ch_brick_wall_08 128 128 9456 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 6
+{
+ ( 10112 -3472 -16 ) ( 9968 -3472 -16 ) ( 9968 -3616 -16 ) ch_brick_wall_08 128 128 -4032 -8688 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 11216 -3616 304 ) ( 11216 -3472 304 ) ( 11360 -3472 304 ) ch_brick_wall_08 128 128 -4032 -8688 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 10080 -2672 44288 ) ( 10224 -2672 44288 ) ( 10224 -2672 -32 ) ch_brick_wall_08 128 128 -4032 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 10592 -3680 8592 ) ( 10592 -3536 8592 ) ( 10592 -3536 -35728 ) ch_brick_wall_08 128 128 8688 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 10256 -2176 44288 ) ( 10112 -2176 44288 ) ( 10112 -2176 -32 ) ch_brick_wall_08 128 128 -4032 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9968 -3472 44288 ) ( 9968 -3616 44288 ) ( 9968 -3616 -32 ) ch_brick_wall_08 128 128 8688 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 7
+{
+ ( 7984 -2272 -16 ) ( 7840 -2272 -16 ) ( 7840 -2416 -16 ) ch_brick_wall_08 128 128 -6160 -9888 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 9088 -2416 304 ) ( 9088 -2272 304 ) ( 9232 -2272 304 ) ch_brick_wall_08 128 128 -6160 -9888 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 7824 -2752 44288 ) ( 7968 -2752 44288 ) ( 7968 -2752 -32 ) ch_brick_wall_08 128 128 -6160 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8784 -2448 8592 ) ( 8784 -2304 8592 ) ( 8784 -2304 -35728 ) ch_brick_wall_08 128 128 9888 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 7968 -2128 44288 ) ( 7824 -2128 44288 ) ( 7824 -2128 -32 ) ch_brick_wall_08 128 128 -6160 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 7840 -2272 44288 ) ( 7840 -2416 44288 ) ( 7840 -2416 -32 ) ch_brick_wall_08 128 128 9888 32 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 8
+{
+ ( 15872 4096 -1536 ) ( -3584 4096 -1536 ) ( -3584 -7680 -1536 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 512 ) ( 15360 -7680 512 ) ( 15360 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 -7680 512 ) ( 15360 4096 512 ) ( 15360 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 4096 512 ) ( -4096 4096 512 ) ( -4096 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 4096 512 ) ( -4096 -7680 512 ) ( -4096 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -3584 4096 -1024 ) ( 15872 4096 -1024 ) ( -3584 -7680 -1024 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 9
+{
+ ( -4096 -7680 4096 ) ( -4096 4096 4096 ) ( 15360 4096 4096 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 512 ) ( 15360 -7680 512 ) ( 15360 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 -7680 512 ) ( 15360 4096 512 ) ( 15360 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 4096 512 ) ( -4096 4096 512 ) ( -4096 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 4096 512 ) ( -4096 -7680 512 ) ( -4096 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 4096 3584 ) ( -4096 -7680 3584 ) ( 15360 4096 3584 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 10
+{
+ ( 15872 4096 -1536 ) ( -3584 4096 -1536 ) ( -3584 -7680 -1536 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 4096 ) ( -4096 4096 4096 ) ( 15360 4096 4096 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 512 ) ( 15360 -7680 512 ) ( 15360 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 -7680 512 ) ( 15360 4096 512 ) ( 15360 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 4096 512 ) ( -4096 -7680 512 ) ( -4096 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 -7168 512 ) ( -4096 -7168 512 ) ( 15360 -7168 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 11
+{
+ ( 15872 4096 -1536 ) ( -3584 4096 -1536 ) ( -3584 -7680 -1536 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 4096 ) ( -4096 4096 4096 ) ( 15360 4096 4096 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 512 ) ( 15360 -7680 512 ) ( 15360 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 -7680 512 ) ( 15360 4096 512 ) ( 15360 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 4096 512 ) ( -4096 4096 512 ) ( -4096 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 14848 4096 512 ) ( 14848 -7680 512 ) ( 14848 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 12
+{
+ ( 15872 4096 -1536 ) ( -3584 4096 -1536 ) ( -3584 -7680 -1536 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 4096 ) ( -4096 4096 4096 ) ( 15360 4096 4096 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 -7680 512 ) ( 15360 4096 512 ) ( 15360 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 4096 512 ) ( -4096 4096 512 ) ( -4096 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 4096 512 ) ( -4096 -7680 512 ) ( -4096 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 3584 512 ) ( 15360 3584 512 ) ( -4096 3584 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 13
+{
+ ( 15872 4096 -1536 ) ( -3584 4096 -1536 ) ( -3584 -7680 -1536 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 4096 ) ( -4096 4096 4096 ) ( 15360 4096 4096 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 -7680 512 ) ( 15360 -7680 512 ) ( 15360 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 15360 4096 512 ) ( -4096 4096 512 ) ( -4096 4096 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -4096 4096 512 ) ( -4096 -7680 512 ) ( -4096 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -3584 -7680 512 ) ( -3584 4096 512 ) ( -3584 -7680 0 ) sky_bog 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+}
+// entity 1
+{
+"origin" "-256.0 -256.0 16.0"
+"angles" "0 45 0"
+"classname" "info_player_start"
+}
+// entity 2
+{
+"origin" "-256.0 -256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 3
+{
+"origin" "-128.0 -256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 4
+{
+"origin" "0.0 -256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 5
+{
+"origin" "128.0 -256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 6
+{
+"origin" "256.0 -256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 7
+{
+"origin" "-256.0 -128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 8
+{
+"radius" "32"
+"targetname" "auto1"
+"origin" "-128.0 -128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 9
+{
+"origin" "0.0 -128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 10
+{
+"origin" "128.0 -128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 11
+{
+"origin" "256.0 -128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 12
+{
+"origin" "-256.0 0.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 13
+{
+"origin" "-128.0 0.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 14
+{
+"origin" "0.0 0.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 15
+{
+"origin" "128.0 0.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 16
+{
+"origin" "256.0 0.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 17
+{
+"origin" "-256.0 128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 18
+{
+"origin" "-128.0 128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 19
+{
+"origin" "0.0 128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 20
+{
+"origin" "128.0 128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 21
+{
+"origin" "256.0 128.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 22
+{
+"origin" "-256.0 256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 23
+{
+"origin" "-128.0 256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 24
+{
+"origin" "0.0 256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 25
+{
+"origin" "128.0 256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 26
+{
+"origin" "256.0 256.0 32.0"
+"classname" "node_pathnode"
+}
+// entity 27
+{
+"origin" "0.0 0.0 80.0"
+"classname" "reflection_probe"
+}
+// entity 28
+{
+"angles" "0 225 0"
+"target" "auto1"
+"export" "1"
+"model" "body_complete_sp_usmc_zach"
+"origin" "241.3 256.5 16.0"
+"classname" "actor_ally_marine_AR_m4grunt"
+}
+// entity 29
+{
+"vehicletype" "cobra"
+"spawnflags" "1"
+"targetname" "cobra_player"
+"model" "vehicle_cobra_helicopter_fly"
+"origin" "4.0 -448.0 234.0"
+"classname" "script_vehicle"
+}
+// entity 30
+{
+"angles" "358 0 0"
+"classname" "script_vehicle"
+"origin" "-813.0 438.0 139.7"
+"model" "vehicle_blackhawk_hero"
+"spawnflags" "1"
+"vehicletype" "blackhawk"
+}
+// entity 31
+{
+"angles" "358 0 0"
+"classname" "script_vehicle"
+"origin" "-811.0 -144.0 0.0"
+"model" "vehicle_m1a1_abrams"
+"spawnflags" "1"
+"vehicletype" "m1a1"
+}
+// entity 32
+{
+"classname" "trigger_use"
+"targetname" "vehseat"
+"origin" "471.000 -263.000 90.000"
+"hintstring" "COBRA_BOARD"
+// brush 0
+{
+ ( 150 -408 0 ) ( 88 -408 0 ) ( 88 -470 0 ) trigger 64 64 -352 176 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 88 -470 180 ) ( 88 -408 180 ) ( 150 -408 180 ) trigger 64 64 -352 176 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 88 -470 180 ) ( 150 -470 180 ) ( 150 -470 0 ) trigger 64 64 -352 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 150 -470 180 ) ( 150 -408 180 ) ( 150 -408 0 ) trigger 64 64 -176 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 150 -408 180 ) ( 88 -408 180 ) ( 88 -408 0 ) trigger 64 64 -352 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 88 -408 180 ) ( 88 -470 180 ) ( 88 -470 0 ) trigger 64 64 -176 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+}
+// entity 33
+{
+"angles" "0 120 0"
+"vehicletype" "bmp"
+"model" "vehicle_bmp_desert"
+"origin" "10739.3 -2244.0 16.0"
+"classname" "script_vehicle"
+}
+// entity 34
+{
+"angles" "0 270 0"
+"export" "8"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "8394.0 -1478.0 0.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 35
+{
+"angles" "0 210 0"
+"export" "12"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "9944.5 -1260.6 304.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 36
+{
+"classname" "actor_enemy_arab_AR_ak47"
+"origin" "9896.5 -1177.4 304.0"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "13"
+"angles" "0 210 0"
+}
+// entity 37
+{
+"angles" "0 210 0"
+"export" "11"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "9878.9 -1243.0 304.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 38
+{
+"classname" "actor_enemy_arab_AR_ak47"
+"origin" "10193.6 -2525.6 304.0"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "19"
+"angles" "0 90 0"
+}
+// entity 39
+{
+"angles" "0 90 0"
+"export" "17"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "10145.6 -2477.6 304.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 40
+{
+"angles" "0 90 0"
+"export" "18"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "10097.6 -2525.6 304.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 41
+{
+"angles" "0 180 0"
+"export" "3"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "9860.0 -1856.0 0.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 42
+{
+"classname" "actor_enemy_arab_AR_ak47"
+"origin" "9860.0 -1760.0 0.0"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "4"
+"angles" "0 180 0"
+}
+// entity 43
+{
+"angles" "0 180 0"
+"export" "2"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "9812.0 -1808.0 0.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 44
+{
+"classname" "actor_enemy_arab_AR_ak47"
+"origin" "8938.0 -2298.0 0.0"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "7"
+"angles" "0 90 0"
+}
+// entity 45
+{
+"angles" "0 90 0"
+"export" "6"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "8842.0 -2298.0 0.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 46
+{
+"angles" "0 90 0"
+"export" "5"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "8890.0 -2250.0 0.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 47
+{
+"angles" "0 270 0"
+"export" "9"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "8442.0 -1430.0 0.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 48
+{
+"classname" "actor_enemy_arab_AR_ak47"
+"origin" "8346.0 -1430.0 0.0"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "10"
+"angles" "0 270 0"
+}
+// entity 49
+{
+"classname" "actor_enemy_arab_AR_ak47"
+"origin" "8320.6 -2342.5 304.0"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "16"
+"angles" "0 120 0"
+}
+// entity 50
+{
+"angles" "0 120 0"
+"export" "14"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "8255.0 -2324.9 304.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 51
+{
+"angles" "0 120 0"
+"export" "15"
+"model" "body_complete_sp_arab_regular_asad"
+"origin" "8237.4 -2390.5 304.0"
+"classname" "actor_enemy_arab_AR_ak47"
+}
+// entity 52
+{
+"vehicletype" "slamraam"
+"angles" "0 120 0"
+"model" "vehicle_slamraam"
+"origin" "8529.2 -2371.2 304.0"
+"classname" "script_vehicle"
+}
+// entity 53
+{
+"vehicletype" "slamraam"
+"angles" "0 150 0"
+"model" "vehicle_slamraam"
+"origin" "10313.3 -2395.2 304.0"
+"classname" "script_vehicle"
+}
+// entity 54
+{
+"vehicletype" "slamraam"
+"angles" "0 150 0"
+"model" "vehicle_slamraam"
+"origin" "10137.5 -1163.1 304.0"
+"classname" "script_vehicle"
+}
+// entity 55
+{
+"angles" "0 270 0"
+"vehicletype" "t72"
+"model" "vehicle_t72_tank"
+"origin" "10950.7 -1014.7 0.0"
+"classname" "script_vehicle"
+}
+// entity 56
+{
+"angles" "0 270 0"
+"vehicletype" "bmp"
+"model" "vehicle_bmp_desert"
+"origin" "9303.3 -1240.8 16.0"
+"classname" "script_vehicle"
+}
+// entity 57
+{
+"angles" "0 180 0"
+"vehicletype" "t72"
+"model" "vehicle_t72_tank"
+"origin" "8496.0 -1790.5 0.0"
+"classname" "script_vehicle"
+}
+// entity 58
+{
+"angles" "0 90 0"
+"vehicletype" "t72"
+"model" "vehicle_t72_tank"
+"origin" "9752.8 -2375.3 0.0"
+"classname" "script_vehicle"
+}

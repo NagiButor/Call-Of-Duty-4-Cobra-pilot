@@ -1,0 +1,174 @@
+// Player vehicle system: AH-1W SuperCobra / M1A1 Abrams ( maps\_playervehicle*.gsc )
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           HINT_BOARD_COBRA
+LANG_ENGLISH        "Press ^3[{+activate}]^7 to board the AH-1W SuperCobra"
+
+REFERENCE           HINT_BOARD_ABRAMS
+LANG_ENGLISH        "Press ^3[{+activate}]^7 to board the M1A1 Abrams"
+
+REFERENCE           HINT_LAND_TO_EXIT
+LANG_ENGLISH        "Land the helicopter to get out."
+
+REFERENCE           HINT_STOP_TO_EXIT
+LANG_ENGLISH        "Stop the tank to get out."
+
+REFERENCE           HINT_NO_ROOM_TO_EXIT
+LANG_ENGLISH        "There is no room to get out here."
+
+REFERENCE           COBRA_TITLE
+LANG_ENGLISH        "AH-1W SUPERCOBRA"
+
+REFERENCE           HELP_COBRA_CYCLIC
+LANG_ENGLISH        "^3[{+forward}]^7 / ^3[{+back}]^7  Fly forward / back"
+
+REFERENCE           HELP_COBRA_STRAFE
+LANG_ENGLISH        "^3[{+moveleft}]^7 / ^3[{+moveright}]^7  Sideslip"
+
+REFERENCE           HELP_COBRA_COLLECTIVE
+LANG_ENGLISH        "^3[{+gostand}]^7 / ^3[{+breath_sprint}]^7  Climb / descend"
+
+REFERENCE           HELP_COBRA_MOUSE
+LANG_ENGLISH        "^3Mouse^7  Look and turn"
+
+REFERENCE           HELP_COBRA_FIRE
+LANG_ENGLISH        "^3[{+attack}]^7  Fire"
+
+REFERENCE           HELP_COBRA_WEAPON
+LANG_ENGLISH        "^3[{weapnext}]^7  Switch weapon"
+
+REFERENCE           HELP_ZOOM_TOGGLE
+LANG_ENGLISH        "^3[{+toggleads_throw}]^7  Zoom"
+
+REFERENCE           HELP_ZOOM_HOLD
+LANG_ENGLISH        "^3[{+speed_throw}]^7  Zoom"
+
+REFERENCE           HELP_COBRA_FLARES
+LANG_ENGLISH        "^3[{+frag}]^7  Flares"
+
+REFERENCE           HELP_COBRA_VIEW
+LANG_ENGLISH        "^3[{+melee}]^7  Cockpit / chase / gunner camera"
+
+REFERENCE           HELP_COBRA_THERMAL
+LANG_ENGLISH        "^3[{+reload}]^7  Thermal polarity (gunner camera)"
+
+REFERENCE           HELP_COBRA_EXIT
+LANG_ENGLISH        "^3[{+activate}]^7  Get out (landed)"
+
+REFERENCE           HUD_KTS
+LANG_ENGLISH        "&&1 KTS"
+
+REFERENCE           HUD_FT
+LANG_ENGLISH        "&&1 FT"
+
+REFERENCE           HUD_FLARES
+LANG_ENGLISH        "FLARES &&1"
+
+REFERENCE           HUD_LOCKING
+LANG_ENGLISH        "LOCKING"
+
+REFERENCE           HUD_LOCKED
+LANG_ENGLISH        "LOCKED"
+
+REFERENCE           HUD_PULL_UP
+LANG_ENGLISH        "PULL UP"
+
+REFERENCE           HUD_MISSILE
+LANG_ENGLISH        "MISSILE LAUNCH"
+
+REFERENCE           HUD_DAMAGE
+LANG_ENGLISH        "DAMAGE CRITICAL"
+
+REFERENCE           HUD_REARMING
+LANG_ENGLISH        "REARMING"
+
+REFERENCE           HUD_NO_FLARES
+LANG_ENGLISH        "No Flares"
+
+REFERENCE           HUD_TADS
+LANG_ENGLISH        "NTS  FLIR"
+
+REFERENCE           HUD_WHOT
+LANG_ENGLISH        "WHOT"
+
+REFERENCE           HUD_BHOT
+LANG_ENGLISH        "BHOT"
+
+REFERENCE           HUD_WFOV
+LANG_ENGLISH        "WFOV"
+
+REFERENCE           HUD_NFOV
+LANG_ENGLISH        "NFOV"
+
+REFERENCE           HUD_RANGE
+LANG_ENGLISH        "RNG &&1"
+
+REFERENCE           HUD_GUNNER
+LANG_ENGLISH        "GUNNER ENGAGING"
+
+REFERENCE           DEADQUOTE_COBRA
+LANG_ENGLISH        "Your Cobra was shot down."
+
+REFERENCE           ABRAMS_TITLE
+LANG_ENGLISH        "M1A1 ABRAMS"
+
+REFERENCE           HELP_ABRAMS_DRIVE
+LANG_ENGLISH        "^3[{+forward}]^7 / ^3[{+back}]^7  Drive / reverse"
+
+REFERENCE           HELP_ABRAMS_TURN
+LANG_ENGLISH        "^3[{+moveleft}]^7 / ^3[{+moveright}]^7  Turn the hull"
+
+REFERENCE           HELP_ABRAMS_MOUSE
+LANG_ENGLISH        "^3Mouse^7  Traverse the turret"
+
+REFERENCE           HELP_ABRAMS_FIRE
+LANG_ENGLISH        "^3[{+attack}]^7  Fire main gun"
+
+REFERENCE           HELP_ABRAMS_MG_TOGGLE
+LANG_ENGLISH        "^3[{+toggleads_throw}]^7  Coaxial machine gun"
+
+REFERENCE           HELP_ABRAMS_MG_HOLD
+LANG_ENGLISH        "^3[{+speed_throw}]^7  Coaxial machine gun"
+
+REFERENCE           HELP_ABRAMS_ZOOM
+LANG_ENGLISH        "^3[{+breath_sprint}]^7  Zoom"
+
+REFERENCE           HELP_ABRAMS_VIEW
+LANG_ENGLISH        "^3[{+melee}]^7  Chase / gunner sight"
+
+REFERENCE           HELP_ABRAMS_EXIT
+LANG_ENGLISH        "^3[{+activate}]^7  Get out"
+
+REFERENCE           HUD_TANK_SABOT
+LANG_ENGLISH        "120mm SABOT"
+
+REFERENCE           HUD_TANK_COAX
+LANG_ENGLISH        "7.62mm COAX"
+
+REFERENCE           HUD_TANK_READY
+LANG_ENGLISH        "READY"
+
+REFERENCE           HUD_TANK_LOADING
+LANG_ENGLISH        "LOADING"
+
+REFERENCE           HUD_TANK_RANGE
+LANG_ENGLISH        "&&1 m"
+
+REFERENCE           HUD_TANK_ARMOR
+LANG_ENGLISH        "ARMOR &&1"
+
+REFERENCE           HUD_TANK_SPEED
+LANG_ENGLISH        "&&1 MPH"
+
+REFERENCE           HUD_TANK_DAMAGE
+LANG_ENGLISH        "ARMOR CRITICAL"
+
+REFERENCE           HUD_TANK_NO_AMMO
+LANG_ENGLISH        "No Ammo"
+
+REFERENCE           DEADQUOTE_ABRAMS
+LANG_ENGLISH        "Your Abrams was destroyed."
+
+ENDMARKER

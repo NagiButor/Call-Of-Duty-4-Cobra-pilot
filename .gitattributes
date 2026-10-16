@@ -1,0 +1,5 @@
+# Game files are stored byte for byte: no line ending conversion ( the tools read the raw bytes )
+* -text
+*.ff binary
+*.d3dbsp binary
+*.wav binary

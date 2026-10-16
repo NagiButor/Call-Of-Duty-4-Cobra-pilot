@@ -1,0 +1,61 @@
+# The repository lives in the Call of Duty 4 game folder and tracks only the cobra_pilot mod:
+# everything is ignored and the mod's own files are let back in one by one.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+
+# map source
+!/map_source/
+/map_source/*
+!/map_source/cobra_pilot.map
+
+# level and player vehicle scripts, compiled map ( lit, paths and reflections )
+!/raw/
+/raw/*
+!/raw/maps/
+/raw/maps/*
+!/raw/maps/cobra_pilot.gsc
+!/raw/maps/cobra_pilot.d3dbsp
+!/raw/maps/_playervehicle.gsc
+!/raw/maps/_playervehicle_cobra.gsc
+!/raw/maps/_playervehicle_abrams.gsc
+!/raw/maps/_playervehicle_README_ru.txt
+
+# vehicle definitions: cobra_pv plus the stock ones sp_tool needs for paths / reflections
+!/raw/vehicles/
+
+# player vehicle weapons
+!/raw/weapons/
+/raw/weapons/*
+!/raw/weapons/sp/
+/raw/weapons/sp/*
+!/raw/weapons/sp/cobra_20mm_pv
+!/raw/weapons/sp/cobra_ffar_pv
+!/raw/weapons/sp/cobra_hellfire_pv
+!/raw/weapons/sp/cobra_sidewinder_pv
+!/raw/weapons/sp/m1a1_turret_pv
+
+# sounds and strings
+!/raw/sound/
+/raw/sound/*
+!/raw/sound/cobra/
+!/raw/soundaliases/
+/raw/soundaliases/*
+!/raw/soundaliases/playervehicle.csv
+!/raw/english/
+/raw/english/*
+!/raw/english/localizedstrings/
+/raw/english/localizedstrings/*
+!/raw/english/localizedstrings/cobra_pilot.str
+!/raw/english/localizedstrings/playervehicle.str
+
+# zone source and the built fast file
+!/zone_source/
+/zone_source/*
+!/zone_source/cobra_pilot.csv
+!/zone/
+/zone/*
+!/zone/english/
+/zone/english/*
+!/zone/english/cobra_pilot.ff
